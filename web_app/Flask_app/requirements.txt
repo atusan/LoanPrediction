@@ -1,5 +1,0 @@
-flask
-zappa
-boto3
-wtforms
-flask_cors
