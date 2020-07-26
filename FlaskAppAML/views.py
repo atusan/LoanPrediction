@@ -8,11 +8,14 @@ import os
 from datetime import datetime
 from flask import render_template, request, redirect
 from FlaskAppAML import app
-
+#testing
 from FlaskAppAML.forms import SubmissionForm
 
-BRAIN_ML_KEY=os.environ.get('API_KEY', "GiwCq7mtZF9BN7l5sXLe5316YLLRQ9tg2W5YmxMLlbKZQ4ZjL8vaLx+kedJCQpOOBLbZ1VDfVlvhE4zl25s9Yw==")
-BRAIN_URL = os.environ.get('URL', "https://ussouthcentral.services.azureml.net/workspaces/77f59d794bb7494f9d02fec7fed95b16/services/b5683d42ed4949069a97348505f3fd0f/execute?api-version=2.0&format=swagger")
+BRAIN_ML_KEY=os.environ.get('API_KEY', "3ykY3j9WZDYvS0Dvf5VoJ1kA0yVT5HVzT+foY4SzKvD6LJhHoysBjlEQWaOniNQCGqsjKrytONq1kdxEWo3Scg==")
+BRAIN_URL = os.environ.get('URL', "https://ussouthcentral.services.azureml.net/workspaces/91af20abfc58455182eaaa615d581c59/services/da7cdb9359a443f0abdef36d30ce8f1c/execute?api-version=2.0&details=true")
+# BRAIN_ML_KEY=os.environ.get('API_KEY', "mKAvf2PpY46MpADGl8YCKoDCtYND5oVLqZxccBHaWUy8bjOHZta2z8xg5pCd7JViQdSNiojK5zPpDkG5zrJMXA==")
+# BRAIN_URL = os.environ.get('URL', "https://ussouthcentral.services.azureml.net/workspaces/77f59d794bb7494f9d02fec7fed95b16/services/f9cff691cad1434794e906ce3f210411/execute?api-version=2.0&format=swagger")
+
 # Deployment environment variables defined on Azure (pull in with os.environ)
 
 # Construct the HTTP request header
@@ -34,31 +37,22 @@ def home():
         # Plug in the data into a dictionary object 
         #  - data from the input form
         #  - text data must be converted to lowercase
-        data = {
-        "Inputs": {
-                "input1":
-                [
-                    {
-                            'Column 0': "0",   
-                            'Gender': "Male",   
-                            'Married': "No",   
-                            'Dependents': "0",   
-                            'Education': "Graduate",   
-                            'Self_Employed': "No",   
-                            'ApplicantIncome': "5849",   
-                            'CoapplicantIncome': "0",   
-                            'LoanAmount': "1",   
-                            'Loan_Amount_Term': "360",   
-                            'Credit_History': "1",   
-                            'Property_Area': "Urban",   
-                            'Loan_Status': "Y",   
-                            'which_data': "data_train",   
-                    }
-                ],
-        },
-    "GlobalParameters":  {
-    }
-}
+        data =  {
+              "Inputs": {
+                "input1": {
+                  "ColumnNames": ["gender", "age", "size", "weight"],
+                  "Values": [ [
+                      0,
+                      1,
+                      form.title.data.lower(),
+                      0
+
+                    ]
+                  ]
+                }
+              },
+              "GlobalParameters": {}
+            }
 
         # Serialize the input data into json string
         body = str.encode(json.dumps(data))
