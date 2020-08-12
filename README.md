@@ -1,22 +1,26 @@
-Loan Predicion 
--- Project Status: [Active]
+# COVID-19 Loan Predicion 
+
+#### -- Project Status: [Active]
+## -- Project Status: [Active]
 Project Intro/Objective
 The purpose of this project is to provide data visualizations and machine learning to predict the possiblity of someone getting loan based off of some factors and conditions.
 
-Methods Used
-Machine Learning
-Data Visualization
-Libraries and Platforms
-Python
-Azureml(Classifiers and Regressors)
-D3
-Tableau
-JavaScript
-Pandas, jupyter
-HTML, Bootstrap, CSS
-Flask
-AWS, Zappa
-Project Description
+### Methods Used
+* Machine Learning
+* Data Visualization
+
+### Libraries and Platforms
+* Python
+* Azureml(Classifiers and Regressors)
+* D3
+* Tableau
+* JavaScript
+* Pandas, jupyter
+* HTML, Bootstrap, CSS
+* Flask 
+* AWS, Zappa
+
+## Project Description
 Coronavirus (COVID-19) is a new disease, and our understanding of the virus that causes it continues to evolve
 
 It was first detected in China and has now been detected in over 100 countries, including the United States
