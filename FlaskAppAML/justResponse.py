@@ -19,7 +19,7 @@ data =  {
     }
 
 body = str.encode(json.dumps(data))
-#example URL: https://ussouthcentral.services.azureml.net/workspaces/91af20abfc58455182eaaa615d581c59/services/da7cdb9359a443f0abdef36d30ce8f1c/execute?api-version=2.0&details=true
+
 url = os.environ.get('URL','<replace with the URL for your webservice')
 api_key = os.environ.get('API_KEY','<API_KEY>') # Replace this with the API key for the web service)
 headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
