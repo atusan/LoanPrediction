@@ -11,10 +11,8 @@ from FlaskAppAML import app
 #testing
 from FlaskAppAML.forms import SubmissionForm
 
-BRAIN_ML_KEY=os.environ.get('API_KEY', "3ykY3j9WZDYvS0Dvf5VoJ1kA0yVT5HVzT+foY4SzKvD6LJhHoysBjlEQWaOniNQCGqsjKrytONq1kdxEWo3Scg==")
-BRAIN_URL = os.environ.get('URL', "https://ussouthcentral.services.azureml.net/workspaces/91af20abfc58455182eaaa615d581c59/services/da7cdb9359a443f0abdef36d30ce8f1c/execute?api-version=2.0&details=true")
-# BRAIN_ML_KEY=os.environ.get('API_KEY', "mKAvf2PpY46MpADGl8YCKoDCtYND5oVLqZxccBHaWUy8bjOHZta2z8xg5pCd7JViQdSNiojK5zPpDkG5zrJMXA==")
-# BRAIN_URL = os.environ.get('URL', "https://ussouthcentral.services.azureml.net/workspaces/77f59d794bb7494f9d02fec7fed95b16/services/f9cff691cad1434794e906ce3f210411/execute?api-version=2.0&format=swagger")
+BRAIN_ML_KEY=os.environ.get('API_KEY', "")
+BRAIN_URL = os.environ.get('URL', "")
 
 # Deployment environment variables defined on Azure (pull in with os.environ)
 
