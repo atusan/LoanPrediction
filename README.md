@@ -46,12 +46,6 @@ Company wants to automate the loan eligibility process (real time) based on cust
 ### Data Engineering & Preprocessing
 * dropping unnecessary features 
 * filling out missing values
-* using Feature Selection method to select top 5 features:
-  - loss_of_smell
-  - Temperature
-  - Sats
-  - loss_of_taste
-  - diabetes
 * Splitting our data into training set and testing set
 
 ### Machine Learning Model
