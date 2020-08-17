@@ -31,34 +31,3 @@ Assuming you have to (or just want to) update your flask application.
 1.  Make and test your changes locally
 2.  run `zappa update dev`
 
-# static folder
-
-* Replace <your S3 bucket> and <your s3 bucket regin> of code below with your S3 bucket information in logic.js file.
-
-    aws_s3_bucket = 'https://<your s3 bucket>.<your s3 bucket regin>.amazonaws.com' //<regin> your s3 bucket regin. ex: s3-us-west-1
-
-
-* Save the static in your S3 bucket
-
-* Change the Bucker Policy of your S3 bucket
-
-        S3 bucket permissions:
-
-        Bucket Policy in Permissons tag:
-
-        {
-            "Version": "2012-10-17",
-            "Statement": [
-                {
-                    "Sid": "PublicReadGetObject",
-                    "Effect": "Allow",
-                    "Principal": "*",
-                    "Action": "s3:GetObject",
-                    "Resource": "arn:aws:s3:::<your S3 bucket>/*"
-                }
-            ]
-        }
-
-        Block pulic access in Permissions tag:
-
-        off Block public access
