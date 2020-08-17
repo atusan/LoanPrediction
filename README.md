@@ -57,4 +57,3 @@ Company wants to automate the loan eligibility process (real time) based on cust
 - data exploration
 - data processing/cleaning
 - statistical modeling
-- writeup/reporting
