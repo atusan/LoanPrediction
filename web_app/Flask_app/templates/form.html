@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Salary range prediction</h2>
+    <form method=post>
+        <dl>
+            <p>
+                <h3>Field Goals Scored</h3>
+                Enter a number of Field Goals Scored (0 - 999)<br/><br/>
+                <!-- {{form.FG(placeholder="250")}} -->
+                {{form.FG}}
+            </p>
+            <p>
+                <h3>Points Scored</h3>
+                Enter the number of Points Scored (0 - 9999)<br/><br/>
+                {{form.PTS}}
+            </p>
+            <p>
+                <h3>Field Goal Attempts</h3>
+                Enter the number of Field Goal Attempts (0 - 9999)<br/><br/>
+                {{form.FGA}}
+            </p>
+            <p>
+                <h3>Two Points Scored</h3>
+                Enter the number of Two Points Scored(0 - 999)<br/><br/>
+                {{form.Two_P}}
+            </p>
+
+        </dl>
+        <p><input type="submit" value="submit"</p>
+    </form>
+ </div>
+{% endblock %}

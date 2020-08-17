@@ -1,4 +1,4 @@
-# COVID-19 Loan Predicion 
+#  Loan Predicion 
 
 #### -- Project Status: [Active]
 
